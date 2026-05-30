@@ -15,10 +15,7 @@ func combSort(numbers []int) {
 	for gap > 1 || swapped {
 		cnt++
 
-		gap = int(float64(gap) / 1.3)
-		if gap < 1 {
-			gap = 1
-		}
+		gap = max(int(float64(gap)/1.3), 1)
 
 		swapped = false
 		for i := 0; i < numbersLen-gap; i++ {

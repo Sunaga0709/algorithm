@@ -1,4 +1,4 @@
-[tasks.run-sort]
+[tasks.sort]
 script = '''
 go run sort/$@/main.go
 '''

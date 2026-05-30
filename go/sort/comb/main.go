@@ -23,8 +23,8 @@ func combSort(numbers []int) {
 				numbers[i], numbers[i+gap] = numbers[i+gap], numbers[i]
 				swapped = true
 			}
-			fmt.Printf("%3d_%d gap: %d, swapped: %v, numbers: %v\n", cnt, i, gap, swapped, numbers)
 
+			fmt.Printf("%3d_%d gap: %d, swapped: %v, numbers: %v\n", cnt, i, gap, swapped, numbers)
 		}
 	}
 }

@@ -1,0 +1,4 @@
+[tasks.run-sort]
+script = '''
+go run sort/$@/main.go
+'''

@@ -15,13 +15,15 @@ func countSort(numbers []int) {
 	result := make([]int, len(numbers))
 
 	fmt.Println(numbers)
-	for _, n := range numbers {
+	for i, n := range numbers {
 		counts[n] = counts[n] + 1
+		fmt.Printf("counting_%2d: %+v, upped: %d\n", i, counts, n)
 	}
 
 	for i := 1; i < len(counts); i++ {
 		counts[i] += counts[i-1]
 	}
+	fmt.Println(counts)
 
 	i := len(numbers) - 1
 	for i >= 0 {

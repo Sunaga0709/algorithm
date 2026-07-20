@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Sunaga0709/algorithm/go/randomvalue"
+)
 
 func main() {
-	quickSort([]int{51, 47, 11, 34, 102, 92, 84, 29, 52, 43})
+	// quickSort([]int{51, 47, 11, 34, 102, 92, 84, 29, 52, 43})
+	quickSort(randomvalue.RandomSlice(10))
 }
 
 func quickSort(numbers []int) {

@@ -6,3 +6,6 @@ run = "go run sort/${usage_alg}/main.go"
 usage = '''
 arg　"<alg>" help="Algorithm name"
 '''
+
+[tasks.search-bin]
+run = "go run search/binary/main.go"

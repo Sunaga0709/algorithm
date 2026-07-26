@@ -1,3 +1,6 @@
+[tools]
+go = "1.26.4"
+
 [tasks.sort]
 run = "go run sort/${usage_alg}/main.go"
 usage = '''

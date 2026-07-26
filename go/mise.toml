@@ -1,0 +1,5 @@
+[tasks.sort]
+run = "go run sort/${usage_alg}/main.go"
+usage = '''
+arg　"<alg>" help="Algorithm name"
+'''

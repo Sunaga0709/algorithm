@@ -46,6 +46,37 @@ func (l *linkedList) insert(data any) {
 	l.head = &nd
 }
 
+func (l *linkedList) reverse() {
+	var prev *node
+	current := l.head
+	for current != nil {
+		next := current.next
+		current.next = prev
+		prev = current
+		current = next
+	}
+
+	l.head = prev
+}
+
+func (l *linkedList) reverse_recursive() {
+	var rr func(current, prev *node) *node
+	rr = func(current, prev *node) *node {
+		if current == nil {
+			return prev
+		}
+
+		next := current.next
+		current.next = prev
+		prev = current
+		current = next
+
+		return rr(current, prev)
+	}
+
+	l.head = rr(l.head, nil)
+}
+
 func (l *linkedList) String() string {
 	var result string
 	if l.head == nil {
@@ -78,4 +109,10 @@ func main() {
 	fmt.Printf("inserted 1.23: %#v\n", l)
 
 	fmt.Printf("------\ndata: %s\n", l.String())
+
+	l.reverse()
+	fmt.Printf("reverse: %s\n", l.String())
+
+	l.reverse_recursive()
+	fmt.Printf("reverse_recursive: %s\n", l.String())
 }

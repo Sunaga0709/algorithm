@@ -15,3 +15,6 @@ run = "go run link-list/${usage_alg}/main.go"
 usage = '''
 arg "<alg>" help="Algorithm name"
 '''
+
+[tasks.hash-table]
+run = "go run hash-table/hash-table/main.go"

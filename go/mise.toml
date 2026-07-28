@@ -18,3 +18,9 @@ arg "<alg>" help="Algorithm name"
 
 [tasks.hash-table]
 run = "go run hash-table/hash-table/main.go"
+
+[tasks.stack]
+run = "go run stack-queue/stack/main.go"
+
+[tasks.queue]
+run = "go run stack-queue/queue/main.go"

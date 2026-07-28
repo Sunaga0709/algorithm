@@ -17,9 +17,7 @@ func (s *stack) append(data any) {
 }
 
 func (s *stack) pop() (any, bool) {
-	length := len(s.value)
-
-	if length == 0 {
+	if len(s.value) == 0 {
 		return nil, false
 	}
 
@@ -40,11 +38,11 @@ func main() {
 	fmt.Printf("added `string`: %+v\n", s)
 
 	popped1, ok := s.pop()
-	fmt.Printf("popped 1: value -> %v, ok -> %v\n", popped1, ok)
+	fmt.Printf("popped 1: %+v: value -> %v, ok -> %v\n", s, popped1, ok)
 
 	popped2, ok := s.pop()
-	fmt.Printf("popped 2: value -> %v, ok -> %v\n", popped2, ok)
+	fmt.Printf("popped 2: %+v: value -> %v, ok -> %v\n", s, popped2, ok)
 
 	popped3, ok := s.pop()
-	fmt.Printf("popped 3: value -> %v, ok -> %v\n", popped3, ok)
+	fmt.Printf("popped 3: %+v: value -> %v, ok -> %v\n", s, popped3, ok)
 }

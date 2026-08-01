@@ -24,3 +24,6 @@ run = "go run stack-queue/stack/main.go"
 
 [tasks.queue]
 run = "go run stack-queue/queue/main.go"
+
+[tasks.bt]
+run = "go run tree/binary-search/main.go"

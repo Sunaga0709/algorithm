@@ -2,12 +2,9 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-)
 
-func randomNumber() int {
-	return rand.Intn(10)
-}
+	"github.com/Sunaga0709/algorithm/go/randomvalue"
+)
 
 type node struct {
 	value int
@@ -118,7 +115,7 @@ func main() {
 	inorder(root)
 
 	for range 3 {
-		n := randomNumber()
+		n := randomvalue.RandomNumber(10)
 		fmt.Printf("search %2d: %v\n", n, search(root, n))
 	}
 
